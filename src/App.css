@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.user-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.user-card {
+  width: 200px;
+  height: 333.86px;
+  border: 2px solid rgb(5, 53, 30);
+  border-radius: 5px;
+  box-shadow: 1px 31px 24px -13px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 31px 24px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 31px 24px -13px rgba(0, 0, 0, 0.75);
+}
