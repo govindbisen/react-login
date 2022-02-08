@@ -11,6 +11,17 @@ import { Userdetail } from "./user/Userdetail";
 import { UserdetailEdit } from "./user/UserdetailEdit";
 import Product from "./product/Product";
 import Login from "./login/Login";
+
+function setToken(userToken) {
+  sessionStorage.setItem("token", JSON.stringify(userToken));
+}
+
+function getToken() {
+  const tokenString = sessionStorage.getItem("token");
+  const userToken = JSON.parse(tokenString);
+  return userToken;
+}
+
 export default function App() {
   const InitialUsers = [
     {
@@ -51,10 +62,12 @@ export default function App() {
     },
   ];
   const [users, setUsers] = useState(InitialUsers);
+  // const [Token, setToken] = useState("");
+  const token = getToken();
 
-  const [Token, setToken] = useState("");
+  console.log("token in app.js", token);
 
-  if (!Token) {
+  if (!token) {
     return <Login setToken={setToken} />;
   }
 

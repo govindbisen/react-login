@@ -26,7 +26,7 @@ export default function Login({ setToken }) {
       username,
       password,
     });
-    setToken("token", token);
+    setToken(token);
     console.log(token);
   };
 
